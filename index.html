@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Fullstack Developer &amp; System Analyst</title>
+    <meta
+      name="description"
+      content="Portofolio Fullstack Developer dan System Analyst."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .nav-scrolled {
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 12px rgba(15, 23, 42, 0.08);
+        backdrop-filter: blur(14px);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-600 antialiased">
+    <!-- Navbar -->
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8" aria-label="Navigasi utama">
+        <a href="#home" class="font-bold tracking-tight text-slate-800">Abyan Farisi Syahrial</a>
+        <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a class="transition hover:text-blue-600" href="#about">About</a>
+          <a class="transition hover:text-blue-600" href="#skills">Skills</a>
+          <a class="transition hover:text-blue-600" href="#projects">Projects</a>
+          <a class="transition hover:text-blue-600" href="#contact">Contact</a>
+        </div>
+        <button
+          id="menu-button"
+          class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Buka menu navigasi"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-6 py-4 md:hidden">
+        <div class="flex flex-col gap-4 text-sm font-medium">
+          <a class="mobile-link hover:text-blue-600" href="#about">About</a>
+          <a class="mobile-link hover:text-blue-600" href="#skills">Skills</a>
+          <a class="mobile-link hover:text-blue-600" href="#projects">Projects</a>
+          <a class="mobile-link hover:text-blue-600" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-20 pt-32 lg:px-8">
+        <div class="grid w-full items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p class="mb-5 font-semibold text-blue-600">Fullstack Developer &amp; System Analyst</p>
+            <h1 class="max-w-3xl text-5xl font-extrabold tracking-tight text-slate-800 sm:text-6xl lg:text-7xl">
+              Halo, saya <span class="text-blue-600">Abyan Farisi Syahrial.</span>
+            </h1>
+            <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
+              Membangun solusi digital yang efisien dari hulu ke hilir, serta merancang arsitektur sistem yang andal dan mudah dikembangkan.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="#projects" class="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3.5 font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+                Lihat Proyek Saya <i class="fa-solid fa-arrow-right text-sm"></i>
+              </a>
+              <a href="cv-nama-saya.pdf" download class="inline-flex items-center gap-2 rounded-lg border-2 border-slate-300 px-5 py-3 font-semibold text-slate-700 transition hover:border-blue-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+                <i class="fa-solid fa-download text-sm"></i> Unduh CV
+              </a>
+            </div>
+          </div>
+          <div class="mx-auto w-full max-w-md">
+            <div class="flex aspect-square items-center justify-center rounded-3xl bg-slate-200 p-5 shadow-inner">
+              <!-- Memperbaiki tampilan gambar di dalam kotak banner -->
+              <div class="flex h-full w-full overflow-hidden items-center justify-center rounded-2xl bg-slate-100">
+                <img src="assets/banner_cover.jpeg" alt="Abyan Farisi Syahrial" class="h-full w-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="bg-white py-20 sm:py-28">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">Profil</p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl">Tentang Saya</h2>
+            <div class="mt-6 space-y-5 text-base leading-8 text-slate-600">
+              <p>Saya adalah developer berusia 23 tahun yang memiliki passion besar dalam menerjemahkan masalah bisnis menjadi solusi kode yang bersih, terukur, dan mudah dipelihara.</p>
+              <p>Saya memiliki pola pikir analitis yang kuat, yang sering saya terapkan tidak hanya pada arsitektur perangkat lunak, tetapi juga saat melakukan riset komparasi dan membedah spesifikasi perangkat keras—seperti performa wireless dan keandalan sensor periferal komputer.</p>
+            </div>
+          </div>
+          <div class="relative w-full min-h-[320px] rounded-2xl bg-slate-200 p-1 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-slate-300/50">
+            <div class="absolute inset-1 flex h-full w-full items-center justify-center rounded-xl bg-white overflow-hidden">
+              <img src="assets/tentang_saya.jpg" alt="Kompilasi Proyek Saya" class="h-full w-full object-contain transition-transform duration-300 hover:scale-[1.03]">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">Toolkit</p>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl">Keahlian Teknis</h2>
+          </div>
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
+              <h3 class="font-semibold text-slate-800">Frontend</h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">HTML</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">CSS</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">Tailwind</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">JavaScript</span>
+              </div>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
+              <h3 class="font-semibold text-slate-800">Backend</h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">PHP</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">Laravel</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">MySQL</span>
+              </div>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
+              <h3 class="font-semibold text-slate-800">System Analysis</h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">UML</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">Database Design</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">UAT</span>
+                <span class="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">API Integration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="bg-white py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">Selected work</p>
+          <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl">Studi Kasus &amp; Proyek</h2>
+          <div class="mt-12 grid gap-8 lg:grid-cols-3">
+            
+            <!-- Proyek 1 -->
+            <article class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
+              <div class="flex h-48 overflow-hidden bg-slate-200">
+                <img src="assets/afcindonesia.png" alt="Website E-commerce Statis" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-slate-800">Website E-commerce Statis</h3>
+                <p class="mt-4 text-sm leading-7 text-slate-600">Membangun platform e-commerce yang cepat dan responsif menggunakan framework Laravel, difokuskan pada manajemen katalog produk dan optimasi performa.</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">Laravel</span><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">Tailwind CSS</span><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">MySQL</span>
+                </div>
+                <div class="mt-6 flex gap-5 text-sm font-semibold"><a class="text-blue-600 hover:text-blue-700" href="https://afcindonesian.com" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a><a class="text-blue-600 hover:text-blue-700" href="https://github.com/" target="_blank" rel="noreferrer">GitHub <i class="fa-brands fa-github ml-1"></i></a></div>
+              </div>
+            </article>
+            
+            <!-- Proyek 2 -->
+            <article class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
+              <div class="flex h-48 overflow-hidden bg-slate-200">
+                <img src="assets/jatimelatibulogtiga.png" alt="Sistem Inventaris Perumahan Terintegrasi" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-slate-800">Sistem Inventaris Perumahan Terintegrasi</h3>
+                <p class="mt-4 text-sm leading-7 text-slate-600">Merancang dan mengembangkan sistem manajemen inventaris perumahan. Bertanggung jawab atas arsitektur sistem, skenario User Acceptance Testing (UAT), hingga integrasi payment gateway Faspay untuk otomatisasi transaksi.</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">Laravel</span><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">Espay API</span><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">MySQL</span>
+                </div>
+                <div class="mt-6 flex gap-5 text-sm font-semibold"><a class="text-blue-600 hover:text-blue-700" href="https://jatimelatibulogtiga.com" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a><a class="text-blue-600 hover:text-blue-700" href="https://github.com/" target="_blank" rel="noreferrer">GitHub <i class="fa-brands fa-github ml-1"></i></a></div>
+              </div>
+            </article>
+            
+            <!-- Proyek 3 (Telah Diperbaiki) -->
+            <article class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md">
+              <div class="relative flex h-48 overflow-hidden bg-slate-200">
+                <span class="absolute right-4 top-4 z-10 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Personal Project</span>
+                <img src="assets/zalio_erp.png" alt="Zalio ERP Dashboard" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-slate-800">Zalio ERP Dashboard</h3>
+                <p class="mt-4 text-sm leading-7 text-slate-600">Sistem Enterprise Resource Planning (ERP) komprehensif yang dirancang untuk merampingkan proses bisnis, dilengkapi dengan dashboard analitik operasional real-time.</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">TypeScript</span><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">React</span><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">Data Visualization</span>
+                </div>
+                <div class="mt-6 flex gap-5 text-sm font-semibold"><a class="text-blue-600 hover:text-blue-700" href="#contact" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a><a class="text-blue-600 hover:text-blue-700" href="https://github.com/" target="_blank" rel="noreferrer">GitHub <i class="fa-brands fa-github ml-1"></i></a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-slate-800 py-20 text-slate-300 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-10 md:flex-row md:items-end">
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-400">Kontak</p>
+            <h2 class="text-3xl font-bold text-white sm:text-4xl">Mari Bekerja Sama</h2>
+            <p class="mt-5 max-w-xl leading-7">Sedang mencari Fullstack Developer atau System Analyst? Mari terhubung!</p>
+          </div>
+          <div class="flex gap-5 text-xl">
+            <a class="transition hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="transition hover:text-white" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a class="transition hover:text-white" href="mailto:hello@example.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="mt-16 border-t border-slate-700 pt-6 text-sm text-slate-400">© 2026 Abyan Farisi Syahrial. Dibuat dengan semangat untuk solusi digital yang lebih baik.</div>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.getElementById("site-header");
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("nav-scrolled", window.scrollY > 12);
+      });
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Buka menu navigasi" : "Tutup menu navigasi");
+        mobileMenu.classList.toggle("hidden", isOpen);
+        menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>';
+      });
+
+      mobileLinks.forEach((link) => link.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Buka menu navigasi");
+        mobileMenu.classList.add("hidden");
+        menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }));
+    </script>
+  </body>
+</html>
