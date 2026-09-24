@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portofolio Profesional - Abyan Farisi Syahrial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+    .pdf-page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 16mm 18mm 14mm 18mm;
+      position: relative;
+      background: #ffffff;
+      page-break-after: always;
+      page-break-inside: avoid;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .page-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+      margin-top: 10px;
+      font-size: 8.5pt;
+      color: #64748b;
+    }
+    .avoid-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       PAGE 1: COVER & EXECUTIVE PROFILE
+       ======================================================== -->
+  <section class="pdf-page">
+    <div>
+      <!-- Top Decorative Accent -->
+      <div class="h-2 w-full rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 mb-8"></div>
+
+      <!-- Header Profile & Photo -->
+      <div class="flex items-start justify-between gap-8">
+        <div class="flex-1">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 border border-blue-200">
+            <i class="fa-solid fa-circle-check text-[10px] text-blue-600"></i> Fullstack Developer &amp; System Analyst
+          </span>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Abyan Farisi <span class="text-blue-600">Syahrial</span>
+          </h1>
+          <p class="mt-2 text-base font-semibold text-slate-600">
+            Spesialisasi: Solusi Arsitektur Sistem, Laravel, Modern Frontend &amp; Pipeline AutoML
+          </p>
+
+          <p class="mt-4 text-xs leading-relaxed text-slate-600 text-justify">
+            Developer berusia 23 tahun dengan fokus kuat pada perancangan arsitektur perangkat lunak yang kokoh, terukur, dan mudah dipelihara. Berpengalaman memimpin siklus hidup pengembangan sistem dari tahap analisis kebutuhan bisnis, normalisasi basis data, skenario User Acceptance Testing (UAT), hingga integrasi payment gateway dan model kecerdasan buatan (AutoML).
+          </p>
+        </div>
+
+        <!-- Photo Frame -->
+        <div class="flex-shrink-0">
+          <div class="relative h-44 w-36 overflow-hidden rounded-2xl border-4 border-white shadow-xl ring-2 ring-slate-200">
+            <img src="assets/Portofolio_Foto.png" class="h-full w-full object-cover" alt="Abyan Farisi Syahrial" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Contact Strip -->
+      <div class="mt-6 grid grid-cols-4 gap-3 rounded-2xl border border-slate-200 bg-slate-50/80 p-3.5 text-xs text-slate-700">
+        <div class="flex items-center gap-2">
+          <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-100 text-blue-700"><i class="fa-solid fa-envelope"></i></span>
+          <div class="truncate">
+            <p class="text-[10px] text-slate-400 font-bold uppercase">Email</p>
+            <p class="font-medium truncate">abyansy@gmail.com</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700"><i class="fa-brands fa-whatsapp"></i></span>
+          <div>
+            <p class="text-[10px] text-slate-400 font-bold uppercase">WhatsApp</p>
+            <p class="font-medium">+62 813-8410-1753</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-200 text-slate-800"><i class="fa-brands fa-github"></i></span>
+          <div class="truncate">
+            <p class="text-[10px] text-slate-400 font-bold uppercase">GitHub</p>
+            <p class="font-medium truncate">github.com/AbyanFarisi</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700"><i class="fa-solid fa-globe"></i></span>
+          <div class="truncate">
+            <p class="text-[10px] text-slate-400 font-bold uppercase">Live Portfolio</p>
+            <p class="font-medium truncate">abyanfarisi.github.io</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Highlights (3 Cards) -->
+      <div class="mt-6">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Pilar Kompetensi Utama</h2>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-blue-100 bg-blue-50/50 p-4">
+            <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md text-sm mb-2.5">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">Arsitektur Sistem &amp; UAT</h3>
+            <p class="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Desain skema relasional, diagram UML, integrasi API payment gateway (Faspay), serta perumusan skenario pengujian komprehensif.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-indigo-100 bg-indigo-50/50 p-4">
+            <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-md text-sm mb-2.5">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">Fullstack Web Engineering</h3>
+            <p class="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Implementasi backend terstruktur (Laravel, PHP, REST API) dan frontend modern (Tailwind CSS, React, Next.js) yang responsif dan cepat.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-violet-100 bg-violet-50/50 p-4">
+            <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md text-sm mb-2.5">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900">AutoML &amp; Data Pipeline</h3>
+            <p class="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Pengembangan pipeline data science end-to-end (CRISP-DM), benchmarking multi-model tabular, evaluasi ROC-AUC, dan MLOps drift monitor.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Summary Stats Strip -->
+      <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm flex items-center justify-around text-center">
+        <div>
+          <p class="text-2xl font-extrabold text-blue-600">4+</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase">Proyek Unggulan</p>
+        </div>
+        <div class="h-8 w-px bg-slate-200"></div>
+        <div>
+          <p class="text-2xl font-extrabold text-indigo-600">End-to-End</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase">Analisis Hingga UAT</p>
+        </div>
+        <div class="h-8 w-px bg-slate-200"></div>
+        <div>
+          <p class="text-2xl font-extrabold text-emerald-600">100%</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase">Responsif &amp; Teruji</p>
+        </div>
+        <div class="h-8 w-px bg-slate-200"></div>
+        <div>
+          <p class="text-2xl font-extrabold text-amber-600">24 Modul</p>
+          <p class="text-[11px] font-semibold text-slate-500 uppercase">Screenshots Terarsip</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 1 -->
+    <div class="page-footer">
+      <span>Abyan Farisi Syahrial &bull; Portofolio Profesional</span>
+      <span>Halaman 1 dari 5</span>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       PAGE 2: TECHNICAL SKILLS & PRODUCTION CLIENT PROJECTS
+       ======================================================== -->
+  <section class="pdf-page">
+    <div>
+      <div class="page-header">
+        <span class="font-bold text-xs uppercase tracking-wider text-blue-600">Toolkit Teknis &amp; Proyek Produksi</span>
+        <span class="text-xs text-slate-400 font-mono">Abyan Farisi Syahrial</span>
+      </div>
+
+      <!-- Skills Grid (4 Categories) -->
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-blue-600"></i> Keahlian Teknis &amp; Penguasaan Teknologi
+        </h2>
+        <div class="grid grid-cols-2 gap-3.5">
+          <!-- Frontend -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-3">
+            <div class="flex items-center gap-2 font-bold text-xs text-blue-700 mb-1.5">
+              <i class="fa-solid fa-code"></i> Frontend Development
+            </div>
+            <p class="text-[10px] text-slate-500 mb-2">Membangun UI yang responsif, modern, dan performan</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">HTML5 / CSS3</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Tailwind CSS</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">JavaScript ES6+</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">React.js</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Next.js</span>
+            </div>
+          </div>
+
+          <!-- Backend & Database -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-3">
+            <div class="flex items-center gap-2 font-bold text-xs text-indigo-700 mb-1.5">
+              <i class="fa-solid fa-server"></i> Backend &amp; Database
+            </div>
+            <p class="text-[10px] text-slate-500 mb-2">Logika bisnis terukur, API andal, dan struktur data aman</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">PHP 8+</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Laravel Framework</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">MySQL / PostgreSQL</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">RESTful API</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">FastAPI (Python)</span>
+            </div>
+          </div>
+
+          <!-- System Analysis -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-3">
+            <div class="flex items-center gap-2 font-bold text-xs text-emerald-700 mb-1.5">
+              <i class="fa-solid fa-network-wired"></i> System Analysis &amp; QA
+            </div>
+            <p class="text-[10px] text-slate-500 mb-2">Perancangan alur proses, diagram UML, dan skenario UAT</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Diagram UML &amp; ERD</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Normalisasi Database</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Skenario UAT Testing</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Faspay Payment Gateway</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Dokumentasi SRS</span>
+            </div>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-3">
+            <div class="flex items-center gap-2 font-bold text-xs text-violet-700 mb-1.5">
+              <i class="fa-solid fa-robot"></i> Machine Learning &amp; AI
+            </div>
+            <p class="text-[10px] text-slate-500 mb-2">AutoML, feature extraction, dan evaluasi performa</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Python Data Science</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">AutoML Pipeline</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">LightGBM / XGBoost</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">Scikit-Learn</span>
+              <span class="rounded bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-700 border border-slate-200">DuckDB &amp; Polars</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Project 1: AFC Indonesia -->
+      <div class="mb-5 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div class="flex gap-4">
+          <div class="h-28 w-44 flex-shrink-0 overflow-hidden rounded-xl border border-slate-200">
+            <img src="assets/afcindonesia.png" class="h-full w-full object-cover" alt="AFC Indonesia" />
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <span class="rounded-full bg-blue-100 px-2.5 py-0.5 text-[10px] font-bold text-blue-700">Client Project &bull; E-Commerce</span>
+              <span class="text-[11px] font-semibold text-blue-600">afcindonesian.com</span>
+            </div>
+            <h3 class="mt-1 text-sm font-bold text-slate-900">Website E-Commerce Statis (AFC Indonesia)</h3>
+            <p class="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Membangun platform e-commerce yang cepat dan responsif menggunakan framework Laravel, difokuskan pada manajemen katalog produk, penataan aset, dan optimasi performa browsing mobile.
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-1.5">
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-700">Laravel</span>
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-700">Tailwind CSS</span>
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-700">MySQL</span>
+              <span class="rounded bg-blue-50 px-2 py-0.5 text-[9px] font-semibold text-blue-700">High Performance UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Project 2: Jatimelati Bulog Tiga -->
+      <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div class="flex gap-4">
+          <div class="h-28 w-44 flex-shrink-0 overflow-hidden rounded-xl border border-slate-200">
+            <img src="assets/jatimelatibulogtiga.png" class="h-full w-full object-cover" alt="Jatimelati Bulog Tiga" />
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <span class="rounded-full bg-emerald-100 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800">Production System &bull; Payment Gateway</span>
+              <span class="text-[11px] font-semibold text-emerald-700">jatimelatibulogtiga.com</span>
+            </div>
+            <h3 class="mt-1 text-sm font-bold text-slate-900">Sistem Inventaris Perumahan Terintegrasi (Jatimelati Bulog Tiga)</h3>
+            <p class="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Merancang dan mengembangkan sistem manajemen inventaris dan administrasi lingkungan perumahan. Bertanggung jawab atas desain arsitektur sistem, skenario User Acceptance Testing (UAT), hingga integrasi payment gateway Faspay untuk otomatisasi transaksi iuran warga.
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-1.5">
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-700">Laravel</span>
+              <span class="rounded bg-emerald-50 px-2 py-0.5 text-[9px] font-bold text-emerald-700 border border-emerald-200">Faspay Payment Gateway API</span>
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-700">MySQL</span>
+              <span class="rounded bg-slate-100 px-2 py-0.5 text-[9px] font-semibold text-slate-700">UAT Testing Scenarios</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 2 -->
+    <div class="page-footer">
+      <span>Abyan Farisi Syahrial &bull; Portofolio Profesional</span>
+      <span>Halaman 2 dari 5</span>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       PAGE 3: FLAGSHIP 1 - ZALIO ERP DASHBOARD SUITE
+       ======================================================== -->
+  <section class="pdf-page">
+    <div>
+      <div class="page-header">
+        <span class="font-bold text-xs uppercase tracking-wider text-amber-600">Proyek Unggulan 1 &bull; Enterprise Resource Planning</span>
+        <span class="text-xs text-slate-400 font-mono">Zalio ERP Suite (12 Modul)</span>
+      </div>
+
+      <!-- Overview Header -->
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <h2 class="text-xl font-extrabold text-slate-900">Zalio Enterprise Resource Planning (ERP) Suite</h2>
+          <p class="text-xs text-slate-600 mt-1">
+            Platform ERP berbasis microservices yang mengintegrasikan seluruh operasional ritel, kasir POS, pengadaan pemasok, arus kas, dan analitik eksekutif real-time.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 justify-end">
+          <span class="rounded-lg bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-700">Next.js</span>
+          <span class="rounded-lg bg-cyan-50 px-2 py-0.5 text-[10px] font-bold text-cyan-800">Go Services</span>
+          <span class="rounded-lg bg-amber-50 px-2 py-0.5 text-[10px] font-bold text-amber-700">FastAPI</span>
+          <span class="rounded-lg bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-blue-700">PostgreSQL</span>
+        </div>
+      </div>
+
+      <!-- 6 Key Modules Grid (Top Row) -->
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Showcase Modul Operasional Zalio ERP (Bagian 1)</h3>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <!-- 01 Dashboard -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/zalio_showcase/02_dashboard_overview.png" class="h-full w-full object-cover" alt="Executive Dashboard" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">01. Executive Dashboard</p>
+          <p class="text-[9px] text-slate-500 leading-tight">KPI omzet, tren omzet vs belanja, dan agregasi data analitik real-time FastAPI.</p>
+        </div>
+
+        <!-- 02 POS Kasir -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/zalio_showcase/03_pos_cashier_system.png" class="h-full w-full object-cover" alt="POS Kasir" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">02. Kasir Point of Sale (POS)</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Grid katalog visual, kalkulasi otomatis subtotal, pajak, diskon, dan multi-payment.</p>
+        </div>
+
+        <!-- 03 Sales Orders -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/zalio_showcase/04_sales_transaction_flow.png" class="h-full w-full object-cover" alt="Sales Order" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">03. Siklus Transaksi Penjualan</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Penerbitan Quotation penawaran, Sales Order (SO), faktur tagihan, dan surat jalan.</p>
+        </div>
+      </div>
+
+      <!-- 6 Key Modules Grid (Bottom Row) -->
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Showcase Modul Operasional Zalio ERP (Bagian 2)</h3>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <!-- 04 Procurement -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/zalio_showcase/05_purchase_procurement.png" class="h-full w-full object-cover" alt="Procurement" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">04. Pengadaan &amp; Pembelian (PO)</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Purchase Order pemasok, Goods Receipt Note (GRN), verifikasi fisik, dan hutang usaha.</p>
+        </div>
+
+        <!-- 05 Cash Flow -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/zalio_showcase/07_cash_flow_analytics.png" class="h-full w-full object-cover" alt="Arus Kas" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">05. Arus Kas &amp; Likuiditas</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Grafik Inflow vs Outflow bulanan, mutasi kas bersih, dan rekonsiliasi kas bank.</p>
+        </div>
+
+        <!-- 06 Multi Warehouse -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/zalio_showcase/08_warehouse_logistics.png" class="h-full w-full object-cover" alt="Multi Gudang" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">06. Multi-Gudang &amp; Logistik</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Kapasitas rak penyimpanan, mutasi transfer antar gudang, dan sinkronisasi Stock Opname.</p>
+        </div>
+      </div>
+
+      <!-- Additional 6 Modules Quick Badge Strip -->
+      <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
+        <p class="text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-2">6 Modul Pendukung Lainnya Terintegrasi:</p>
+        <div class="grid grid-cols-6 gap-2 text-center text-[10px]">
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-shield-halved text-blue-600 block mb-1"></i> 07. Auth JWT
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-boxes-stacked text-amber-600 block mb-1"></i> 08. Master SKU
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-book-bookmark text-emerald-600 block mb-1"></i> 09. COA Akuntansi
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-sitemap text-indigo-600 block mb-1"></i> 10. Multi-Cabang
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-clock-rotate-left text-slate-600 block mb-1"></i> 11. Audit Trail
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-users text-violet-600 block mb-1"></i> 12. CRM Pelanggan
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 3 -->
+    <div class="page-footer">
+      <span>Abyan Farisi Syahrial &bull; Portofolio Profesional</span>
+      <span>Halaman 3 dari 5</span>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       PAGE 4: FLAGSHIP 2 - AUTOML & PREDICTIVE PIPELINE
+       ======================================================== -->
+  <section class="pdf-page">
+    <div>
+      <div class="page-header">
+        <span class="font-bold text-xs uppercase tracking-wider text-violet-600">Proyek Unggulan 2 &bull; Artificial Intelligence &amp; MLOps</span>
+        <span class="text-xs text-slate-400 font-mono">AutoML Platform (12 Tahap)</span>
+      </div>
+
+      <!-- Overview Header -->
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <h2 class="text-xl font-extrabold text-slate-900">AutoML Platform &amp; Predictive Pipeline</h2>
+          <p class="text-xs text-slate-600 mt-1">
+            Engine Automated Machine Learning berbasis CRISP-DM untuk data tabular dengan akselerasi engine Polars/DuckDB, turnamen multi-model, dan continuous drift monitoring.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-1.5 justify-end">
+          <span class="rounded-lg bg-yellow-50 px-2 py-0.5 text-[10px] font-bold text-yellow-800">Python</span>
+          <span class="rounded-lg bg-violet-50 px-2 py-0.5 text-[10px] font-bold text-violet-700">LightGBM</span>
+          <span class="rounded-lg bg-cyan-50 px-2 py-0.5 text-[10px] font-bold text-cyan-800">Polars Engine</span>
+          <span class="rounded-lg bg-purple-50 px-2 py-0.5 text-[10px] font-bold text-purple-700">DuckDB SQL</span>
+        </div>
+      </div>
+
+      <!-- 6 Key Stages Grid (Top Row) -->
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Showcase Tahap Pipeline CRISP-DM (Bagian 1)</h3>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <!-- 01 Orchestrator -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/automl_showcase/04_pipeline_orchestrator.png" class="h-full w-full object-cover" alt="Orchestrator" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">01. Pipeline Orchestrator</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Visualisasi 6 tahap CRISP-DM asinkron, pemetaan target bisnis, dan status model.</p>
+        </div>
+
+        <!-- 02 EDA Understanding -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/automl_showcase/05_data_understanding_eda.png" class="h-full w-full object-cover" alt="EDA Understanding" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">02. Data Understanding (EDA)</p>
+          <p class="text-[9px] text-slate-500 leading-tight">4 kartu metrik utama (5.000 baris, 12 kolom, 0% missing value) dan analisis outlier IQR.</p>
+        </div>
+
+        <!-- 03 Tabular Correlation -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/automl_showcase/06_correlation_heatmap.png" class="h-full w-full object-cover" alt="Tabular Correlation" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">03. Eksplorasi Tabular &amp; Matriks</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Matriks korelasi fitur dan perbandingan data mentah vs data bersih via query DuckDB SQL.</p>
+        </div>
+      </div>
+
+      <!-- 6 Key Stages Grid (Bottom Row) -->
+      <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Showcase Tahap Pipeline CRISP-DM (Bagian 2)</h3>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <!-- 04 Leaderboard -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/automl_showcase/08_automl_leaderboard.png" class="h-full w-full object-cover" alt="Leaderboard" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">04. Turnamen AutoML Leaderboard</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Turnamen algoritma (LightGBM, XGBoost, Random Forest), Best Model Winner, dan F1-Score.</p>
+        </div>
+
+        <!-- 05 Diagnostic Evaluation -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/automl_showcase/09_evaluation_confusion_matrix.png" class="h-full w-full object-cover" alt="Evaluasi ROC" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">05. Evaluasi &amp; Diagnostik ROC</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Confusion Matrix, Akurasi, Presisi, Recall, Balanced Acc, dan kurva ROC-AUC interaktif.</p>
+        </div>
+
+        <!-- 06 Inference What-If -->
+        <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+          <div class="h-20 w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-1.5">
+            <img src="assets/automl_showcase/10_inference_whatif_simulator.png" class="h-full w-full object-cover" alt="Inference What-If" />
+          </div>
+          <p class="font-bold text-[11px] text-slate-900">06. What-If Inference Simulator</p>
+          <p class="text-[9px] text-slate-500 leading-tight">Simulator prediksi interaktif dengan parameter slider dinamis untuk pengujian bisnis seketika.</p>
+        </div>
+      </div>
+
+      <!-- Additional 6 Stages Quick Badge Strip -->
+      <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
+        <p class="text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-2">6 Tahap Pipeline Lengkap Lainnya:</p>
+        <div class="grid grid-cols-6 gap-2 text-center text-[10px]">
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-house text-violet-600 block mb-1"></i> 07. Hero Home
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-cloud-arrow-up text-blue-600 block mb-1"></i> 08. Ingestion CSV
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-microchip text-indigo-600 block mb-1"></i> 09. Engine Arch
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-shield-virus text-emerald-600 block mb-1"></i> 10. Leakage Guard
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-chart-line text-amber-600 block mb-1"></i> 11. Drift Monitor
+          </div>
+          <div class="rounded-lg bg-white p-1.5 border border-slate-200 font-medium">
+            <i class="fa-solid fa-wand-magic-sparkles text-pink-600 block mb-1"></i> 12. AI Copilot
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 4 -->
+    <div class="page-footer">
+      <span>Abyan Farisi Syahrial &bull; Portofolio Profesional</span>
+      <span>Halaman 4 dari 5</span>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       PAGE 5: RESUME SUMMARY, METHODOLOGY & CONTACT CHANNELS
+       ======================================================== -->
+  <section class="pdf-page">
+    <div>
+      <div class="page-header">
+        <span class="font-bold text-xs uppercase tracking-wider text-slate-800">Filosofi Rekayasa, Metodologi &amp; Kontak</span>
+        <span class="text-xs text-slate-400 font-mono">Abyan Farisi Syahrial</span>
+      </div>
+
+      <!-- Work Methodology -->
+      <div class="mb-5">
+        <h2 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-gears text-blue-600"></i> Metodologi Kerja &amp; Standar Rekayasa
+        </h2>
+        <div class="grid grid-cols-3 gap-3 text-xs">
+          <div class="rounded-xl border border-slate-200 p-3 bg-white">
+            <div class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+              <span class="flex h-5 w-5 items-center justify-center rounded bg-blue-100 text-blue-700 text-[10px]">1</span>
+              Analisis &amp; Desain
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">
+              Memahami proses bisnis sebelum coding. Menyusun diagram UML, normalisasi database 3NF, dan spesifikasi API yang terdokumentasi.
+            </p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-3 bg-white">
+            <div class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+              <span class="flex h-5 w-5 items-center justify-center rounded bg-indigo-100 text-indigo-700 text-[10px]">2</span>
+              Implementasi Terstruktur
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">
+              Menulis kode modular, memisahkan concern (MVC / Clean Architecture), dan mengoptimalkan performa query database serta bundle frontend.
+            </p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-3 bg-white">
+            <div class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+              <span class="flex h-5 w-5 items-center justify-center rounded bg-emerald-100 text-emerald-700 text-[10px]">3</span>
+              Pengujian &amp; Delivery
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">
+              Merancang skenario User Acceptance Testing (UAT), menguji integrasi payment gateway, dan memastikan aplikasi siap produksi (production-ready).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Overview Table -->
+      <div class="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Ringkasan Profil Pengembang</h3>
+        <table class="w-full text-xs text-left border-collapse">
+          <tbody>
+            <tr class="border-b border-slate-100">
+              <td class="py-1.5 font-bold text-slate-500 w-36">Nama Lengkap</td>
+              <td class="py-1.5 font-semibold text-slate-900">: Abyan Farisi Syahrial</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-1.5 font-bold text-slate-500">Peran Profesional</td>
+              <td class="py-1.5 font-semibold text-slate-900">: Fullstack Developer &amp; System Analyst</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-1.5 font-bold text-slate-500">Keahlian Inti</td>
+              <td class="py-1.5 text-slate-700">: Laravel, Tailwind CSS, MySQL, REST API, Faspay Gateway, Python, AutoML</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-1.5 font-bold text-slate-500">Bahasa</td>
+              <td class="py-1.5 text-slate-700">: Bahasa Indonesia (Native), Bahasa Inggris (Professional Working Proficiency)</td>
+            </tr>
+            <tr>
+              <td class="py-1.5 font-bold text-slate-500">Status Ketersediaan</td>
+              <td class="py-1.5 font-bold text-emerald-600">: Tersedia untuk Peluang Full-Time, Kontrak, &amp; Proyek Kolaboratif</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Contact Banner Card -->
+      <div class="rounded-2xl border border-slate-800 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 p-5 text-white shadow-xl">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <span class="rounded bg-blue-500/20 px-2 py-0.5 text-[10px] font-bold text-blue-400">Siap Berkolaborasi</span>
+            <h3 class="text-lg font-bold text-white mt-1">Mari Bangun Solusi Digital yang Berdampak</h3>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Membutuhkan pengembang untuk membangun platform web, sistem ERP, integrasi payment gateway, atau otomasi data? Hubungi saya kapan saja:
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-4 grid grid-cols-3 gap-3 pt-3 border-t border-slate-700/60 text-xs">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-blue-400"></i>
+            <span>abyansy@gmail.com</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+            <span>+62 813-8410-1753</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-globe text-indigo-400"></i>
+            <span>abyanfarisi.github.io/Portofolio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Page 5 -->
+    <div class="page-footer">
+      <span>&copy; 2026 Abyan Farisi Syahrial &bull; All Rights Reserved</span>
+      <span>Halaman 5 dari 5</span>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -314,6 +314,13 @@
           <i id="theme-toggle-icon" class="fa-solid fa-moon text-sm"></i>
         </button>
 
+        <!-- Quick Download Portfolio PDF in Navbar -->
+        <a href="assets/Portofolio_Abyan_Farisi_Syahrial.pdf" download="Portofolio_Abyan_Farisi_Syahrial.pdf" target="_blank"
+          class="inline-flex items-center gap-1.5 rounded-xl border border-blue-200 bg-blue-50/80 px-3 py-2 text-xs font-semibold text-blue-700 transition hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/60 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:bg-blue-900/60">
+          <i class="fa-solid fa-file-pdf text-red-500 text-xs"></i>
+          <span data-i18n="nav.porto_pdf">Portofolio (PDF)</span>
+        </a>
+
         <!-- Quick Download CV PDF in Navbar -->
         <a href="assets/cv_abyan_webdev.pdf" download="cv_abyan_webdev.pdf" target="_blank"
           class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700">
@@ -364,10 +371,15 @@
         <a class="mobile-link text-slate-700 hover:text-blue-600 dark:text-slate-200 dark:hover:text-blue-400"
           href="#contact" data-i18n="nav.contact">Kontak</a>
 
-        <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+        <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2.5">
+          <a href="assets/Portofolio_Abyan_Farisi_Syahrial.pdf" download="Portofolio_Abyan_Farisi_Syahrial.pdf" target="_blank"
+            class="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-3 text-center text-sm font-semibold text-white shadow-md hover:from-blue-700 hover:to-indigo-700">
+            <i class="fa-solid fa-file-pdf text-red-300"></i>
+            <span data-i18n="hero.porto_pdf">Unduh Portofolio (PDF)</span>
+          </a>
           <a href="assets/cv_abyan_webdev.pdf" download="cv_abyan_webdev.pdf" target="_blank"
-            class="flex items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-center text-sm font-semibold text-white shadow-md hover:bg-blue-700">
-            <i class="fa-solid fa-file-pdf"></i>
+            class="flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 py-3 text-center text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
+            <i class="fa-solid fa-file-pdf text-red-500"></i>
             <span data-i18n="hero.cv_pdf">Unduh CV (PDF)</span>
           </a>
         </div>
@@ -425,6 +437,16 @@
               <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
             </a>
 
+            <!-- Portfolio PDF Download Primary -->
+            <a href="assets/Portofolio_Abyan_Farisi_Syahrial.pdf" download="Portofolio_Abyan_Farisi_Syahrial.pdf" target="_blank"
+              class="group inline-flex items-center gap-2.5 rounded-xl border-2 border-blue-500/80 bg-blue-50/60 px-5 py-3 text-sm font-semibold text-blue-700 shadow-sm transition-all duration-200 hover:border-blue-600 hover:bg-blue-100/70 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:border-blue-500/50 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:border-blue-400 dark:hover:bg-blue-900/60 dark:hover:text-blue-200"
+              id="btn-download-porto">
+              <i class="fa-solid fa-file-pdf text-red-500 text-base transition-transform group-hover:scale-110"></i>
+              <span data-i18n="hero.porto_pdf">Unduh Portofolio (PDF)</span>
+              <span
+                class="rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-bold text-white shadow-xs">PDF</span>
+            </a>
+
             <!-- CV Download Primary PDF (Requested: assets/cv_abyan_webdev.pdf) -->
             <a href="assets/cv_abyan_webdev.pdf" download="cv_abyan_webdev.pdf" target="_blank"
               class="group inline-flex items-center gap-2.5 rounded-xl border-2 border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:border-blue-600 hover:bg-blue-50/50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-blue-500 dark:hover:bg-slate-800 dark:hover:text-blue-400"
@@ -432,7 +454,7 @@
               <i class="fa-solid fa-file-pdf text-red-500 text-base transition-transform group-hover:scale-110"></i>
               <span data-i18n="hero.cv_pdf">Unduh CV (PDF)</span>
               <span
-                class="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:bg-blue-900/60 dark:text-blue-300">PDF</span>
+                class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">CV</span>
             </a>
 
             <!-- Secondary Docx Link Dropdown / Quick Links -->
@@ -1297,9 +1319,14 @@
 
             <!-- Quick Download CV Button in Contact Card -->
             <div class="flex flex-wrap items-center gap-3">
+              <a href="assets/Portofolio_Abyan_Farisi_Syahrial.pdf" download="Portofolio_Abyan_Farisi_Syahrial.pdf" target="_blank"
+                class="inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 transition hover:from-blue-500 hover:to-indigo-500 focus:outline-none">
+                <i class="fa-solid fa-file-pdf text-red-300 text-base"></i>
+                <span data-i18n="contact.btn_porto">Portofolio (PDF)</span>
+              </a>
               <a href="assets/cv_abyan_webdev.pdf" download="cv_abyan_webdev.pdf" target="_blank"
-                class="inline-flex items-center gap-2.5 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 transition hover:bg-blue-500 focus:outline-none">
-                <i class="fa-solid fa-file-arrow-down text-base"></i>
+                class="inline-flex items-center gap-2.5 rounded-xl border border-slate-700 bg-slate-800 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-slate-600 hover:bg-slate-700 focus:outline-none">
+                <i class="fa-solid fa-file-arrow-down text-base text-blue-400"></i>
                 <span data-i18n="contact.btn_cv">Download CV (PDF)</span>
               </a>
               <a href="https://wa.me/6281384101753" target="_blank" rel="noreferrer"
@@ -1457,6 +1484,7 @@
           skills: "Keahlian",
           projects: "Proyek",
           contact: "Kontak",
+          porto_pdf: "Portofolio (PDF)",
           cv_btn: "CV (PDF)"
         },
         hero: {
@@ -1465,6 +1493,7 @@
           greeting: "Halo, saya <span class=\"bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent\">Abyan Farisi Syahrial.</span>",
           desc: "Membangun solusi digital yang andal dari hulu ke hilir: mulai dari perancangan arsitektur sistem, integrasi payment gateway, hingga implementasi kode yang bersih dan terukur. Berpengalaman dalam ekosistem Laravel, modern frontend, dan machine learning pipeline (AutoML).",
           cta_projects: "Lihat Proyek Saya",
+          porto_pdf: "Unduh Portofolio (PDF)",
           cv_pdf: "Unduh CV (PDF)",
           cv_id: "Unduh CV (DOCX ID)",
           cv_en: "Download CV (DOCX EN)",
@@ -1528,6 +1557,7 @@
           badge: "Kontak & Kolaborasi",
           title: "Mari Bekerja Sama",
           desc: "Sedang mencari Fullstack Developer atau System Analyst untuk proyek Anda? Mari terhubung dan diskusikan ide Anda!",
+          btn_porto: "Portofolio (PDF)",
           btn_cv: "Download CV (PDF)",
           copyright: "© 2026 Abyan Farisi Syahrial. Dibuat dengan passion untuk solusi digital yang lebih baik."
         },
@@ -1545,6 +1575,7 @@
           skills: "Skills",
           projects: "Projects",
           contact: "Contact",
+          porto_pdf: "Portfolio (PDF)",
           cv_btn: "CV (PDF)"
         },
         hero: {
@@ -1553,6 +1584,7 @@
           greeting: "Hello, I'm <span class=\"bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent\">Abyan Farisi Syahrial.</span>",
           desc: "Building end-to-end reliable digital solutions: from system architecture design and payment gateway integration to clean, scalable code implementations. Experienced with Laravel, modern frontend frameworks, and automated Machine Learning (AutoML) pipelines.",
           cta_projects: "View My Projects",
+          porto_pdf: "Download Portfolio (PDF)",
           cv_pdf: "Download CV (PDF)",
           cv_id: "Download CV (DOCX ID)",
           cv_en: "Download CV (DOCX EN)",
@@ -1616,6 +1648,7 @@
           badge: "Contact & Collaboration",
           title: "Let's Work Together",
           desc: "Looking for a Fullstack Developer or System Analyst for your project? Let's connect and discuss your vision!",
+          btn_porto: "Portfolio (PDF)",
           btn_cv: "Download CV (PDF)",
           copyright: "© 2026 Abyan Farisi Syahrial. Crafted with passion for better digital solutions."
         },
