@@ -1,0 +1,6 @@
+.agent/
+*.bak
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
