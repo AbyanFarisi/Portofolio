@@ -2075,8 +2075,8 @@
         updateModalContent();
       }
 
-      // Perbarui showcase explorer jika aktif
-      updateShowcaseExplorer();
+      // Perbarui showcase explorer jika aktif tanpa scroll
+      updateShowcaseExplorer(false);
     }
 
     // Event listener tombol pengubah bahasa
@@ -2228,10 +2228,15 @@
           });
           modalThumbnailsEl.appendChild(thumb);
 
-          // Auto-scroll active thumbnail into view
+          // Auto-scroll active thumbnail inside container only
           if (isActive) {
             setTimeout(() => {
-              thumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+              if (modalThumbnailsEl && thumb) {
+                modalThumbnailsEl.scrollTo({
+                  left: thumb.offsetLeft - (modalThumbnailsEl.clientWidth / 2) + (thumb.clientWidth / 2),
+                  behavior: 'smooth'
+                });
+              }
             }, 50);
           }
         });
@@ -2335,7 +2340,7 @@
     const showcaseFullscreenBtn = document.getElementById("showcase-fullscreen-btn");
     const showcaseOpenModalDirect = document.getElementById("showcase-open-modal-direct");
 
-    function updateShowcaseExplorer() {
+    function updateShowcaseExplorer(fromUserClick = false) {
       if (!showcaseItemsList) return;
       const project = projectGalleries[showcaseActiveSystem];
       if (!project || !project.images) return;
@@ -2407,15 +2412,18 @@
 
         itemBtn.addEventListener("click", () => {
           showcaseActiveIndex = idx;
-          updateShowcaseExplorer();
+          updateShowcaseExplorer(true);
         });
 
         showcaseItemsList.appendChild(itemBtn);
 
-        // Scroll active into view
-        if (isActive) {
+        // Auto-scroll inside sidebar container ONLY when user clicks, never on initial page load
+        if (isActive && fromUserClick) {
           setTimeout(() => {
-            itemBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            if (showcaseItemsList && itemBtn) {
+              const targetScroll = itemBtn.offsetTop - showcaseItemsList.offsetTop - 12;
+              showcaseItemsList.scrollTo({ top: targetScroll, behavior: 'smooth' });
+            }
           }, 40);
         }
       });
@@ -2426,7 +2434,7 @@
         if (showcaseActiveSystem !== "zalio") {
           showcaseActiveSystem = "zalio";
           showcaseActiveIndex = 1; // Start on Dashboard
-          updateShowcaseExplorer();
+          updateShowcaseExplorer(true);
         }
       });
 
@@ -2434,14 +2442,14 @@
         if (showcaseActiveSystem !== "automl") {
           showcaseActiveSystem = "automl";
           showcaseActiveIndex = 0; // Start on Landing
-          updateShowcaseExplorer();
+          updateShowcaseExplorer(true);
         }
       });
 
       showcasePrevBtn.addEventListener("click", () => {
         if (showcaseActiveIndex > 0) {
           showcaseActiveIndex--;
-          updateShowcaseExplorer();
+          updateShowcaseExplorer(true);
         }
       });
 
@@ -2449,7 +2457,7 @@
         const project = projectGalleries[showcaseActiveSystem];
         if (project && showcaseActiveIndex < project.images.length - 1) {
           showcaseActiveIndex++;
-          updateShowcaseExplorer();
+          updateShowcaseExplorer(true);
         }
       });
 
@@ -2467,12 +2475,77 @@
       });
     }
 
-    // Inisialisasi showcase explorer
-    updateShowcaseExplorer();
+    // Inisialisasi showcase explorer tanpa auto-scroll halaman
+    updateShowcaseExplorer(false);
 
-      /* -------------------------------------------------------------
-       * NAVBAR SCROLL SPY & MOBILE MENU
-       * ------------------------------------------------------------- */      setLanguage(currentLang);
+    /* -------------------------------------------------------------
+     * NAVBAR SCROLL SPY & MOBILE MENU
+     * ------------------------------------------------------------- */
+    const header = document.getElementById("site-header");
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
+
+    window.addEventListener("scroll", () => {
+      // Sticky Header styling
+      header.classList.toggle("nav-scrolled", window.scrollY > 20);
+
+      // Active Section Scroll Spy
+      let currentSectionId = "";
+      const scrollPosition = window.scrollY + 120;
+
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          currentSectionId = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href === `#${currentSectionId}`) {
+          link.classList.add("active-link");
+        } else {
+          link.classList.remove("active-link");
+        }
+      });
+    });
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Buka menu navigasi" : "Tutup menu navigasi");
+        mobileMenu.classList.toggle("hidden", isOpen);
+        menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-bars text-sm"></i>' : '<i class="fa-solid fa-xmark text-sm"></i>';
+      });
+
+      mobileLinks.forEach((link) =>
+        link.addEventListener("click", () => {
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Buka menu navigasi");
+          mobileMenu.classList.add("hidden");
+          menuButton.innerHTML = '<i class="fa-solid fa-bars text-sm"></i>';
+        })
+      );
+    }
+
+    // Pastikan halaman selalu memuat dari posisi paling atas saat refresh / pertama buka
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", () => {
+      if (!window.location.hash || window.location.hash === "#home") {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      }
+    });
+
+    // Inisialisasi bahasa saat pertama kali dimuat
+    setLanguage(currentLang);
   </script>
 </body>
 
